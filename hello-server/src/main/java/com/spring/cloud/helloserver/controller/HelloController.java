@@ -33,7 +33,7 @@ public class HelloController {
         List<ServiceInstance> instances = client.getInstances("hello-server");
         int sleepTime = new Random().nextInt(3000);
         System.out.println(sleepTime);
-        //Thread.sleep(sleepTime);
+        Thread.sleep(sleepTime);
         log.info("服务数量",instances.size());
         return from;
     }
